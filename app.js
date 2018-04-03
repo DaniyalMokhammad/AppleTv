@@ -3,7 +3,7 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-
+var port = process.env.PORT || 3000
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
@@ -21,4 +21,6 @@ io.on('connection', function (socket) {
     })
 });
 
-app.listen(process.env.PORT || 3000);
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
