@@ -19,5 +19,9 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "engines": {
+    "node": "8.9.1",
+    "npm": "4.6.1",
   }
 }
